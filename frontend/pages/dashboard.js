@@ -99,24 +99,12 @@ const Tabs = ({ color }) => {
               <div className="tab-content tab-space">
                 <div className={openTab === 1 ? "block" : "hidden"} id="link1">
                   <div>
-                    <div className="grid gap-5 grid-cols-3  text-center">
+                    <div className="grid gap-5 place-items-center text-center">
                       <label
                         htmlFor="my-modal-3"
-                        className="bg-green-200 p-3 font-pop font-bold "
+                        className="bg-green-200 p-3 font-pop font-bold px-20 "
                       >
                         Add Class
-                      </label>
-                      <label
-                        htmlFor="my-modal-3"
-                        className="bg-red-200 p-3 font-pop font-bold"
-                      >
-                        Delete Class
-                      </label>
-                      <label
-                        htmlFor="my-modal-3"
-                        className="bg-red-200 p-3 font-pop font-bold"
-                      >
-                        All Classes
                       </label>
                     </div>
                     <input
@@ -177,11 +165,171 @@ const Tabs = ({ color }) => {
                         </form>
                       </div>
                     </div>
+
+                    <h1 className="font-bold font-pop text-2xl text-center mb-5 mt-10">
+                      All Classes
+                    </h1>
+
+                    <div className="overflow-x-auto m-2 font-pop">
+                      <table className="table table-normal w-full">
+                        <thead>
+                          <tr>
+                            <th>Date</th>
+
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Delete</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>1</th>
+                            <td>SWE10</td>
+                            <td>Theory</td>
+                            <td>
+                              <svg
+                                className="h-8 w-8 text-red-500"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                strokeWidth="2"
+                                stroke="currentColor"
+                                fill="none"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                {" "}
+                                <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                                <line x1="18" y1="6" x2="6" y2="18" />{" "}
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                              </svg>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <th>2</th>
+                            <td>Data Science</td>
+                            <td>Lab</td>
+                            <td>
+                              <svg
+                                className="h-8 w-8 text-red-500"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                strokeWidth="2"
+                                stroke="currentColor"
+                                fill="none"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                {" "}
+                                <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                                <line x1="18" y1="6" x2="6" y2="18" />{" "}
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                              </svg>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <th>3</th>
+                            <td>Data Science</td>
+                            <td>TT</td>
+                            <td>
+                              <svg
+                                className="h-8 w-8 text-red-500"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                strokeWidth="2"
+                                stroke="currentColor"
+                                fill="none"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              >
+                                {" "}
+                                <path stroke="none" d="M0 0h24v24H0z" />{" "}
+                                <line x1="18" y1="6" x2="6" y2="18" />{" "}
+                                <line x1="6" y1="6" x2="18" y2="18" />
+                              </svg>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
                 <div className={openTab === 2 ? "block" : "hidden"} id="link2">
-                  <div></div>
                   <div>
+                    <div className="grid gap-5 place-items-center text-center">
+                      <label
+                        htmlFor="my-modal-2"
+                        className="bg-green-200 p-3 font-pop font-bold px-20 "
+                      >
+                        Add Course
+                      </label>
+                      <input
+                        type="checkbox"
+                        id="my-modal-2"
+                        className="modal-toggle"
+                      />
+                      <div className="modal">
+                        <div className="modal-box relative min-w-fit">
+                          <label
+                            htmlFor="my-modal-2"
+                            className="btn btn-sm btn-circle absolute right-2 top-2"
+                          >
+                            ✕
+                          </label>
+                          <h3 className="text-lg font-bold font-pop  text-center">
+                            Add Class
+                          </h3>
+                          <form className="flex flex-col mt-5 gap-5 ">
+                            <input
+                              type="text"
+                              placeholder="Select Course"
+                              className="select select-bordered select-success w-full "
+                            />
+                            <select
+                              type="text"
+                              placeholder="Class Type"
+                              className="select select-bordered select-success w-full"
+                            >
+                              <option className="p-5">Lab</option>
+                              <option className="p-5">Theory</option>
+                            </select>
+                            <input
+                              type="date"
+                              htmlFor="datepicker"
+                              placeholder="Date & Time"
+                              className="input input-bordered input-success w-full "
+                            />
+                            <input
+                              type="text"
+                              placeholder="Description"
+                              className="input input-bordered input-success w-full overflow-y-auto p-20 "
+                            />
+                            <input
+                              type="text"
+                              placeholder="Class Link"
+                              className="input input-bordered input-success w-full "
+                            />
+                            <div className="flex justify-end p-5 gap-5">
+                              <button className="bg-green-200 p-2 rounded-lg font-bold font-pop text-green-800">
+                                Add Class
+                              </button>
+                              <button className="bg-red-200 p-2 rounded-lg font-bold font-pop text-red-800">
+                                Cancel
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h1 className="font-bold font-pop text-2xl text-center mb-5 mt-5">
+                      All Course
+                    </h1>
                     <div className="grid grid-cols-2 xl:grid-cols-8">
                       <Courses />
                       <Courses />

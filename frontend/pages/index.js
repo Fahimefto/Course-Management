@@ -40,6 +40,9 @@ export default function Home() {
     );
   return (
     <Layout title="Class">
+      <h1 className="font-bold font-pop text-2xl text-center mb-5 mt-5">
+        All Classes
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2">
         {data.data.map((x) => (
           <Class data={x} key={x.id} />
